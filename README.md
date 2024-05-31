@@ -124,6 +124,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
     - Create a table visual.
     - Add `Top 10 Spend Transactions` measure based on selected filters.
 
+### Dashboard👇
 ![Screenshot_1](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/6fe3aff1-f870-44e5-936b-fde285c641b3)
 
 #### 📗 Page 2: Spend vs Income
@@ -146,6 +147,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
     - Add a slicer for `CompanyName`.
     - Style it as a horizontal list with single selection enabled.
 
+### Dashboard👇
 ![Screenshot_2](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/83227fef-c0df-4df8-8fa3-da1f09f40690)
 
 #### 📘 Page 3: Profitability
@@ -167,6 +169,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
     - Add a single column for profitable months/quarters.
     - Order by month (January to December) or quarter (Q1 to Q4).
 
+### Dashboard👇
 ![Screenshot_4](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/7ad1f16a-05ea-47b4-80c7-136befed97fc)
 
 #### 📙 Page 4: Client Base (Optional)
@@ -194,6 +197,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
     - Add `Country` and `CustomerCount` columns.
     - Order by customer count descending.
 
+### Dashboard👇
 ![Screenshot_6](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/48472bee-10fe-4d2e-8e8e-254d9ae20dc1)
 
 ## 🌿 Results and Conclusion
