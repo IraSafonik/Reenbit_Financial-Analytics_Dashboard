@@ -1,24 +1,24 @@
-# Financial Analytics Dashboard
+# 🌟 Financial Analytics Dashboard 
 
-## Project Overview
+## 💡Project Overview 
 
 The **Financial Analytics Dashboard** project aims to provide a comprehensive financial analysis for a set of companies. The dashboard is built using Power BI and incorporates various financial metrics, allowing users to visualize and filter data interactively.
 
-### Project Goals
+### ☝️ Project Goals
 
 - Visualize the total spend and income for each company.
 - Compare spending versus income and profit.
 - Track financial trends over time.
 - Analyze the geographical distribution of customers and identify major contributors to income.
 
-### Tools and Technologies
+### 🛠️ Tools and Technologies
 
 - **Power BI Desktop**: For data visualization and dashboard creation.
 - **Excel**: Source of raw data.
 - **DAX (Data Analysis Expressions)**: For creating measures and calculated columns.
 - **Power Query**: For data transformation and cleaning.
 
-## Data Sources
+## 🗂️ Data Sources
 
 1. **SpendCategories.xlsx**:
     - **Spend Categories** sheet: Defines parent-level categories.
@@ -43,9 +43,9 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 <img width="821" alt="Знімок екрана 2024-05-31 о 12 48 01" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/95e7ab66-ec53-45d5-b586-24ae9af3779e">
 
 
-## Process and Steps
+## 💻 Process and Steps
 
-### Step 1: Data Loading and Cleaning
+### 1️⃣ Step 1: Data Loading and Cleaning
 
 1. **Load Data**:
     - Open Power BI Desktop.
@@ -55,7 +55,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
     - Remove any empty rows and unnecessary columns.
     - Ensure all data types are correctly set (e.g., dates, numbers).
 
-### Step 2: Data Modeling
+### 2️⃣ Step 2: Data Modeling
 
 1. **Create Relationships**:
     - Define relationships between fact tables (spending and income transactions) and dimension tables (categories, companies, customers).
@@ -64,7 +64,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 2. **Rename Tables**:
     - Follow naming conventions: `Dim_{TableName}` for dimension tables and `Fact_{TableName}` for fact tables.
 
-### Step 3: Creating Measures
+### 3️⃣ Step 3: Creating Measures
 
 1. **Total Income**:
     ```DAX
@@ -95,13 +95,13 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
    Calendar = CALENDAR(MIN('Fact_CompanySpends'[TransactionDate]), MAX('Fact_IncomeTransactions'[ReceivedDate]))
    ```
 
-### Step 4: Create Relationships between tables
+### 4️⃣ Step 4: Create Relationships between tables
 
 ![Screenshot_7](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/3f39dade-0238-4981-9f40-df018d3fd77a)
 
-### Step 5: Creating Visuals: 
+### 5️⃣ Step 5: Creating Visuals: 
 
-#### Page 1: Basic Spend Overview
+#### 📕 Page 1: Basic Spend Overview
 
 1. **Total Spend by Company**:
     - Create a clustered column chart.
@@ -126,7 +126,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 
 ![Screenshot_1](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/6fe3aff1-f870-44e5-936b-fde285c641b3)
 
-#### Page 2: Spend vs Income
+#### 📗 Page 2: Spend vs Income
 
 1. **Total Spend vs Total Income by Company**:
     - Create a clustered column chart.
@@ -148,7 +148,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 
 ![Screenshot_2](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/83227fef-c0df-4df8-8fa3-da1f09f40690)
 
-#### Page 3: Profitability
+#### 📘 Page 3: Profitability
 
 1. **Total Spend vs Total Income vs Profit by Company**:
     - Create a clustered column chart.
@@ -169,8 +169,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 
 ![Screenshot_4](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/7ad1f16a-05ea-47b4-80c7-136befed97fc)
 
-
-#### Page 4: Client Base (Optional)
+#### 📙 Page 4: Client Base (Optional)
 
 1. **Map Visualization**:
     - Add a map visual to display customer locations.
@@ -197,7 +196,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 
 ![Screenshot_6](https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/48472bee-10fe-4d2e-8e8e-254d9ae20dc1)
 
-## Results and Conclusion
+## 🌿 Results and Conclusion
 
 The Financial Analytics Dashboard provides a detailed view of company spending, income, and profitability. Users can interact with various filters and visuals to gain insights into financial performance and customer distribution. This project showcases the power of Power BI in transforming raw data into actionable insights, facilitating better decision-making and financial planning.
 
