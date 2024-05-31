@@ -1,0 +1,180 @@
+# Financial Analytics Dashboard
+
+## Project Overview
+
+The **Financial Analytics Dashboard** project aims to provide a comprehensive financial analysis for a set of companies. The dashboard is built using Power BI and incorporates various financial metrics, allowing users to visualize and filter data interactively.
+
+### Project Goals
+
+- Visualize the total spend and income for each company.
+- Compare spending versus income and profit.
+- Track financial trends over time.
+- Analyze the geographical distribution of customers and identify major contributors to income.
+
+### Tools and Technologies
+
+- **Power BI Desktop**: For data visualization and dashboard creation.
+- **Excel**: Source of raw data.
+- **DAX (Data Analysis Expressions)**: For creating measures and calculated columns.
+- **Power Query**: For data transformation and cleaning.
+
+## Data Sources
+
+1. **SpendCategories.xlsx**:
+    - **Spend Categories** sheet: Defines parent-level categories.
+    - **Spend Subcategories** sheet: Defines detailed subcategories and references parent categories.
+
+2. **CompanySpends.xlsx**:
+    - **Spend Transactions** sheet: Contains detailed spending transactions.
+    - **Company Budgets** sheet: Contains company spend budgets broken down by quarters.
+
+3. **CompanyIncomes.xlsx**:
+    - **Income Transactions** sheet: Contains detailed income transactions.
+    - **Customers** sheet: Contains customer data, including Country and City.
+
+## Process and Steps
+
+### Step 1: Data Loading and Cleaning
+
+1. **Load Data**:
+    - Open Power BI Desktop.
+    - Use the Excel connector to load the data from the provided Excel files.
+
+2. **Clean Data in Power Query**:
+    - Remove any empty rows and unnecessary columns.
+    - Ensure all data types are correctly set (e.g., dates, numbers).
+
+### Step 2: Data Modeling
+
+1. **Create Relationships**:
+    - Define relationships between fact tables (spending and income transactions) and dimension tables (categories, companies, customers).
+    - Use Star Schema to structure the data model.
+
+2. **Rename Tables**:
+    - Follow naming conventions: `Dim_{TableName}` for dimension tables and `Fact_{TableName}` for fact tables.
+
+### Step 3: Creating Measures
+
+1. **Total Income**:
+    ```DAX
+    TotalIncome = SUM('Fact_CompanyIncomes'[AmountReceivedUsd])
+    ```
+
+2. **Total Spend**:
+    ```DAX
+    TotalSpend = SUM('Fact_CompanySpends'[AmountSpentUsd])
+    ```
+
+3. **Profit**:
+    ```DAX
+    Profit = [TotalIncome] - [TotalSpend]
+    ```
+
+4. **Customer Income Percentage**:
+    ```DAX
+    CustomerIncomePercentage = 
+    DIVIDE (
+        SUM ( 'Fact_CompanyIncomes'[AmountReceivedUsd] ),
+        CALCULATE ( [TotalIncome], ALL ( 'Dim_Customers' ) )
+    )
+    ```
+5. **Create a Calendar Table**:
+    - In Power BI, go to "Modeling" -> "New Table" and enter the following DAX formula:
+    ```DAX
+    Calendar = 
+
+### Step 4: Create Relationships between tables
+
+### Step 5: Creating Visuals: 
+
+#### Page 1: Basic Spend Overview
+
+1. **Total Spend by Company**:
+    - Create a clustered column chart.
+    - Add `CompanyName` to the Axis.
+    - Add `TotalSpend` to the Values.
+    - Sort values from lowest to highest.
+
+2. **Transaction Table**:
+    - Create a table visual.
+    - Add `CompanyName`, `TransactionDate`, `SubCategoryName`, `CategoryName`, and `AmountSpent` columns.
+
+3. **Filters**:
+    - Add slicers for Spend Category, Subcategory, and Date Range.
+    - Add menu items for All, Budgeted, and Not Budgeted spends using bookmarks.
+
+4. **Total Spend Card**:
+    - Add a card visual to display `TotalSpend` (filter agnostic).
+
+5. **Top 10 Spend Transactions**:
+    - Create a table visual.
+    - Add `Top 10 Spend Transactions` measure based on selected filters.
+
+#### Page 2: Spend vs Income
+
+1. **Total Spend vs Total Income by Company**:
+    - Create a clustered column chart.
+    - Add `CompanyName` to the Axis.
+    - Add `TotalSpend` and `TotalIncome` to the Values.
+    - Sort by company name ascending.
+
+2. **Trends Over Time**:
+    - Create a line chart.
+    - Add `Date` to the Axis.
+    - Add `TotalSpend` and `TotalIncome` to the Values.
+
+3. **Date Range Filter**:
+    - Add a date range slicer to affect all visuals on the page.
+
+4. **Company Selector**:
+    - Add a slicer for `CompanyName`.
+    - Style it as a horizontal list with single selection enabled.
+
+#### Page 3: Profitability
+
+1. **Total Spend vs Total Income vs Profit by Company**:
+    - Create a clustered column chart.
+    - Add `CompanyName` to the Axis.
+    - Add `TotalSpend`, `TotalIncome`, and `Profit` to the Values.
+    - Sort by profit value from largest to lowest.
+
+2. **Spend, Income, and Profit by Month/Quarter**:
+    - Create a clustered column chart.
+    - Add `Month/Quarter` to the Axis (use a switch parameter).
+    - Add `TotalSpend`, `TotalIncome`, and `Profit` to the Values.
+    - Add a slicer for `Month`/`Quarter`.
+
+3. **Profitable Periods Table**:
+    - Create a table visual.
+    - Add a single column for profitable months/quarters.
+    - Order by month (January to December) or quarter (Q1 to Q4).
+
+#### Page 4: Client Base (Optional)
+
+1. **Map Visualization**:
+    - Add a map visual to display customer locations.
+    - Use `City` and `Country` fields from `Dim_Customers`.
+
+2. **Company Selector**:
+    - Add a slicer for `CompanyName` to the right side.
+
+3. **Big Customers Table**:
+    - Create a table visual.
+    - Add `Customer`, `AmountReceivedUsd`, and `CustomerIncomePercentage` columns.
+    - Filter to show customers contributing to 80% of the total income.
+
+4. **Transactions Over Time**:
+    - Create a line chart.
+    - Add `TransactionDate` to the Axis.
+    - Add `AmountReceivedUsd` to the Values.
+    - Filter by selected customer from the map.
+
+5. **Top 5 Countries by Customer Count**:
+    - Create a table visual.
+    - Add `Country` and `CustomerCount` columns.
+    - Order by customer count descending.
+
+## Results and Conclusion
+
+The Financial Analytics Dashboard provides a detailed view of company spending, income, and profitability. Users can interact with various filters and visuals to gain insights into financial performance and customer distribution. This project showcases the power of Power BI in transforming raw data into actionable insights, facilitating better decision-making and financial planning.
+
