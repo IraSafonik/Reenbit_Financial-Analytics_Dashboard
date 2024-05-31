@@ -93,7 +93,7 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
     - In Power BI, go to "Modeling" -> "New Table" and enter the following DAX formula:
     ```DAX
    Calendar = CALENDAR(MIN('Fact_CompanySpends'[TransactionDate]), MAX('Fact_IncomeTransactions'[ReceivedDate]))
- ```
+   ```
 
 ### Step 4: Create Relationships between tables
 
