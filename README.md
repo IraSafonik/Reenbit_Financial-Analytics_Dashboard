@@ -22,26 +22,15 @@ The **Financial Analytics Dashboard** project aims to provide a comprehensive fi
 
 1. **SpendCategories.xlsx**:
     - **Spend Categories** sheet: Defines parent-level categories.
-   <img width="647" alt="Знімок екрана 2024-05-31 о 12 50 31" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/cf7b42da-4f09-4cb3-8e51-81934fac0368">
-
     - **Spend Subcategories** sheet: Defines detailed subcategories and references parent categories.
-<img width="902" alt="Знімок екрана 2024-05-31 о 12 50 22" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/1ba3e2dc-4a96-41b6-b784-62b208e9b185">
 
 2. **CompanySpends.xlsx**:
     - **Spend Transactions** sheet: Contains detailed spending transactions.
-<img width="1109" alt="Знімок екрана 2024-05-31 о 12 52 24" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/72d3471e-f6d8-43f7-bc1c-451a12da7df7">
-
     - **Company Budgets** sheet: Contains company spend budgets broken down by quarters.
-<img width="902" alt="Знімок екрана 2024-05-31 о 12 50 40" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/a5d84e72-46df-462c-b68e-81fbe1812972">
-
 
 3. **CompanyIncomes.xlsx**:
     - **Income Transactions** sheet: Contains detailed income transactions.
-   <img width="732" alt="Знімок екрана 2024-05-31 о 12 47 38" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/19d1b950-f229-40d9-a7ce-37844937dc56">
-
     - **Customers** sheet: Contains customer data, including Country and City.
-<img width="821" alt="Знімок екрана 2024-05-31 о 12 48 01" src="https://github.com/IraSafonik/Reebit_Financial-Analytics_Dashboard/assets/32171563/95e7ab66-ec53-45d5-b586-24ae9af3779e">
-
 
 ## 💻 Process and Steps
 
